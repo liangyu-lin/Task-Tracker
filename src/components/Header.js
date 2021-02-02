@@ -3,7 +3,7 @@ import Button from './Button'
 
 
 
-const Header = ({title, onAdd}) => {
+const Header = ({title, onAdd, showAdd}) => {
 
 
 
@@ -11,7 +11,7 @@ const Header = ({title, onAdd}) => {
     return (
       <header className="header">
         <h1 style={{}}>{title}</h1>
-        <Button color="green" text="Add" onClick={onAdd} />
+        <Button color={showAdd ? 'orange': "#4BD9A9"} text={showAdd ? 'Close' : 'Add'} onClick={onAdd} />
       </header>
     );
 }
